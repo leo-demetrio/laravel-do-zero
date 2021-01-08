@@ -14,7 +14,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('site.category.index');
+        $slug = 123;
+        return view('site.category.index',compact('slug'));
     }
 
 
@@ -26,7 +27,7 @@ class CategoryController extends Controller
      */
     public function show($slug)
     {
-        return view('site.category.show', [ "slug" => $slug ]);
+        return view('site.category.show');
     }
 
 }
